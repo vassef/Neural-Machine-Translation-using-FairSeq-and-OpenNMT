@@ -1,0 +1,74 @@
+# en-fa.yaml
+
+## Where the samples will be written
+save_data: drive/MyDrive/CA5/data/saved_data_onmt
+
+## Where the vocab(s) will be written
+src_vocab: drive/MyDrive/CA5/data/vocab.en
+tgt_vocab: drive/MyDrive/CA5/data/vocab.fa
+
+# Overwriting existing files in the folder
+overwrite: True
+
+src_subword_model: drive/MyDrive/CA5/data/code.en
+tgt_subword_model: drive/MyDrive/CA5/data/code.fa
+
+# Corpus opts:
+data:
+    train:
+        path_src: drive/MyDrive/CA5/data/train_prc.en
+        path_tgt: drive/MyDrive/CA5/data/train_prc.fa
+        transforms: [bpe]
+
+    valid:
+        path_src: drive/MyDrive/CA5/data/valid_prc.en
+        path_tgt: drive/MyDrive/CA5/data/valid_prc.fa
+        transforms: [bpe]
+
+# silently ignore empty lines in the data
+skip_empty_level: silent
+
+# Train on a single GPU
+world_size: 1
+gpu_ranks: [0]
+
+# here to save the checkpoints
+save_model: drive/MyDrive/CA5/checkpoints/onmt3/onmt
+save_checkpoint_steps: 200
+valid_steps: 25
+train_steps: 1800
+report_every: 25
+
+# Batching
+batch_type: "tokens"
+batch_size: 8192
+valid_batch_size: 16384
+max_generator_batches: 2
+accum_count: [8]
+
+# Optimization
+model_dtype: "fp16"
+optim: "adam"
+learning_rate: 2
+warmup_steps: 800
+decay_method: "noam"
+adam_beta2: 0.98
+max_grad_norm: 0
+label_smoothing: 0.1
+param_init: 0
+param_init_glorot: true
+normalization: "tokens"
+
+# Model
+encoder_type: transformer
+decoder_type: transformer
+position_encoding: true
+enc_layers: 6
+dec_layers: 6
+heads: 8
+rnn_size: 512
+word_vec_size: 512
+transformer_ff: 2048
+dropout_steps: [0]
+dropout: [0.2]
+attention_dropout: [0.2]
