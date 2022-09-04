@@ -6,6 +6,7 @@ The first step was processing, which encompasses utilizing BPE for tokenization(
 ## FairSeq
 Considering FairSeq, we had to specify some hyperparameters for the model, such as the loss function, optimizer, batch size, and so forth.
 Here is the sample output when training the model with the FairSeq tool:
-![fig3](https://user-images.githubusercontent.com/88703731/134761715-27a06f5b-d296-475d-b90a-4f5fa69bf63f.png)
+
+![fig1](https://github.com/vassef/Neural-Machine-Translation-using-FairSeq-and-OpenNMT/blob/9243c47626d67c1c40de39f22244d81121d04ff4/Figures/FairSeq.png)
 
 
