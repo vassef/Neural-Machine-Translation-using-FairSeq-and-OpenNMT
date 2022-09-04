@@ -12,5 +12,5 @@ Here is the sample output when training the model with the FairSeq tool:
 ## OpenNMT
 The same procedure was applied to OpenNMT, and the sample output is as follows:
 
-![fig2](https://github.com/vassef/Neural-Machine-Translation-using-FairSeq-and-OpenNMT/blob/9243c47626d67c1c40de39f22244d81121d04ff4/Figures/FairSeq.png)
+![fig2](https://github.com/vassef/Neural-Machine-Translation-using-FairSeq-and-OpenNMT/blob/240eeb6161f7f11d62e9d078ad13164bd449a8b7/Figures/OpenNMT.png)
 
